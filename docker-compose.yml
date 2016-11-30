@@ -1,0 +1,11 @@
+version: '2'
+services:
+  tg-cli:
+    build:
+      context: .
+    # stdin_open: true
+    working_dir: /app/
+    restart: "unless-stopped"
+    volumes:
+      # - /data/telegram-cli:/home/telegram/.telegram-cli
+      - /data/telegram-cli:/telegram/data
